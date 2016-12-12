@@ -1,5 +1,5 @@
 {
-  "name": "ajax-api-tutorial",
+  "name": "ajax-api-",
   "version": "1.0.0",
   "description": "",
   "main": "jquery.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Michael Cheng <cheng.c.mike@gmail.com> (http://michaelcheng.io)",
+  "author": "iyad Altoubah",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.0",
