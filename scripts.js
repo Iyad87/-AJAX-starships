@@ -10,3 +10,8 @@ $(function() {
             
            });
 });
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").load("data.json");
+    });
+});
