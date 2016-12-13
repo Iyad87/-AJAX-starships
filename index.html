@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+   <p><br/><br/></p>
+<div class="container">
+    
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+    <tr>
+        <th>name</th>
+        <th>model</th>
+        <th>manufacturer</th>
+        <th>lenght</th>
+        <th>crew</th>
+        <th>passengers</th>
+         <th>cargo_capacity</th>
+        <th>consumables</th>
+        <th>hyperdrive_rating</th>
+
+        
+        </tr>
+    </thead>
+    </table>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+    $.getJSON("data.json",function(data){
+       var items = [];
+        $.each(data,function(key, val){
+            
+          items.push("<tr>"); 
+            
+         items.push("<td id=''"+key+"''>"+val.name+"</td>");
+        items.push("<td id=''"+key+"''>"+val.model+"</td>");
+        items.push("<td id=''"+key+"''>"+val.manufacturer+"</td>");
+        items.push("<td id=''"+key+"''>"+val.length+"</td>");
+        items.push("<td id=''"+key+"''>"+val.crew+"</td>");
+        items.push("<td id=''"+key+"''>"+val.passengers+"</td>");
+       items.push("<td id=''"+key+"''>"+val.cargo_capacity+"</td>");
+        items.push("<td id=''"+key+"''>"+val.consumables+"</td>");
+        items.push("<td id=''"+key+"''>"+val.hyperdrive_rating+"</td>");
+
+          items.push("</tr>"); 
+        
+        });
+        
+        $("<tbody/>",{html: items.join("")}).appendTo("table");
+    
+    });
+    </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
